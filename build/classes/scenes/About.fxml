@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="root" maxHeight="600.0" maxWidth="800.0" minHeight="600.0" minWidth="800.0" prefHeight="600.0" prefWidth="800.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="scenes.AboutController">
+    <stylesheets>
+        <URL value="@about.css" />
+    </stylesheets>
+   <children>
+      <ImageView fx:id="imageView" fitHeight="250.0" fitWidth="300.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@darrenatwork.JPG" />
+         </image>
+      </ImageView>
+      <Button layoutX="371.0" layoutY="560.0" mnemonicParsing="false" onAction="#returnButton" text="Return" />
+      <Label layoutX="337.0" layoutY="27.0" prefHeight="67.0" prefWidth="451.0" text="I am a 30 year old United States Marine Sergeant who is also a senior at the Univeristy of Missouri persuing a Bachelors of Science in Information Technology. I have been programming computers for 20 years now." wrapText="true" />
+      <Label layoutX="327.0" layoutY="-5.0" prefHeight="67.0" prefWidth="464.0" text="About me:" wrapText="true">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="327.0" layoutY="78.0" prefHeight="67.0" prefWidth="464.0" text="About the application:" wrapText="true">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="337.0" layoutY="110.0" prefHeight="67.0" prefWidth="451.0" text="This application was written to assist my fiance in her constant grading of students' tests and quizzes. Once completely finished (after this class), it will have more features and the ability to be voice controlled." wrapText="true" />
+   </children>
+</AnchorPane>

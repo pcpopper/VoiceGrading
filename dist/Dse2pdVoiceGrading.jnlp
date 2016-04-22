@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="Dse2pdVoiceGrading.jnlp">
+  <information>
+    <title>Dse2pdVoiceGrading</title>
+    <vendor>pcpopper</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="Dse2pdVoiceGrading.jar" size="141101" download="eager" />
+    <jar href="lib/WSJ_8gau_13dCep_16k_40mel_130Hz_6800Hz.jar" size="11126462" download="eager" />
+    <jar href="lib/WSJ_8gau_13dCep_8kHz_31mel_200Hz_3500Hz.jar" size="11086139" download="eager" />
+    <jar href="lib/json-simple-1.1.1.jar" size="23737" download="eager" />
+    <jar href="lib/sphinx4.jar" size="867040" download="eager" />
+  </resources>
+  <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="Dse2pdVoiceGrading" >
+    <param name="requiredFXVersion" value="8.0+"/>
+  </applet-desc>
+  <jfx:javafx-desc  width="800" height="600" main-class="dse2pdvoicegrading.Dse2pdVoiceGrading"  name="Dse2pdVoiceGrading" />
+  <update check="always"/>
+</jnlp>

@@ -1,0 +1,11 @@
+#JSGF V1.0;
+
+grammar speech;
+
+public <answer1> = ( One | A );
+public <answer2> = ( Two | B );
+public <answer3> = ( Three | C );
+public <answer4> = ( Four | D );
+public <answer5> = ( Five | E );
+
+public <skip> = ( Next | Skip );

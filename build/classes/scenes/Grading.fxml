@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="scenes.GradingController">
+   <children>
+      <HBox prefHeight="26.0" prefWidth="600.0" spacing="5.0" style="-fx-background-color: rgb(155,155,155);">
+         <children>
+            <Label text="Currently grading: ">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblClass">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+         </children>
+         <padding>
+            <Insets bottom="5.0" left="5.0" top="5.0" />
+         </padding>
+      </HBox>
+      <HBox prefHeight="24.0" style="-fx-background-color: rgb(155,155,155);">
+         <children>
+            <HBox prefHeight="16.0" prefWidth="387.0" spacing="5.0">
+               <children>
+                  <Label text="Current Grade:" />
+                  <Label fx:id="lblCorrect" text="0/0" />
+                  <Label fx:id="lblPercent" text="0%" />
+               </children>
+            </HBox>
+            <HBox alignment="TOP_RIGHT" prefHeight="16.0" prefWidth="402.0" spacing="2.0">
+               <children>
+                  <Label text="Current question:" />
+                  <Label fx:id="lblQCurr" text="1" />
+                  <Label text="of" />
+                  <Label fx:id="lblQTot" text="0" />
+               </children>
+            </HBox>
+         </children>
+         <padding>
+            <Insets bottom="5.0" left="15.0" right="15.0" />
+         </padding>
+      </HBox>
+      <VBox prefHeight="466.0" prefWidth="800.0" style="-fx-background-color: rgb(200,200,200);">
+         <children>
+            <Label fx:id="lblText" text=" " wrapText="true">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <GridPane>
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="266.0" minWidth="10.0" prefWidth="24.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="741.0" minWidth="10.0" prefWidth="741.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label fx:id="lblA1" opacity="0.0" stylesheets="@grading.css" text="Erie" wrapText="true" GridPane.columnIndex="1" />
+                  <Label fx:id="lblA2" opacity="0.0" text="Huron" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <Label fx:id="lblA3" opacity="0.0" text="Michigan" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <Label fx:id="lblA4" opacity="0.0" text="Ontario" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <Label fx:id="lblA5" opacity="0.0" text="Superior" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                  <Label fx:id="lblQ1" opacity="0.0" text="A)" />
+                  <Label fx:id="lblQ2" opacity="0.0" text="B)" GridPane.rowIndex="1" />
+                  <Label fx:id="lblQ3" opacity="0.0" text="C)" GridPane.rowIndex="2" />
+                  <Label fx:id="lblQ4" opacity="0.0" text="D)" GridPane.rowIndex="3" />
+                  <Label fx:id="lblQ5" opacity="0.0" text="E)" GridPane.rowIndex="4" />
+               </children>
+               <padding>
+                  <Insets left="15.0" />
+               </padding>
+            </GridPane>
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <padding>
+            <Insets left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </VBox>
+      <HBox alignment="CENTER" prefHeight="21.0" prefWidth="800.0" spacing="5.0" style="-fx-background-color: rgb(200,200,200);">
+         <children>
+            <Button fx:id="btnQ1" disable="true" mnemonicParsing="false" onAction="#gradeQuestionButtons" text="   A   " />
+            <Button fx:id="btnQ2" disable="true" layoutX="286.0" layoutY="15.0" mnemonicParsing="false" onAction="#gradeQuestionButtons" text="   B   " />
+            <Button fx:id="btnQ3" disable="true" mnemonicParsing="false" onAction="#gradeQuestionButtons" text="   C   " />
+            <Button fx:id="btnQ4" disable="true" layoutX="340.0" layoutY="15.0" mnemonicParsing="false" onAction="#gradeQuestionButtons" text="   D   " />
+            <Button fx:id="btnQ5" disable="true" layoutX="367.0" layoutY="15.0" mnemonicParsing="false" onAction="#gradeQuestionButtons" text="   E   " />
+         </children>
+         <padding>
+            <Insets bottom="5.0" top="5.0" />
+         </padding>
+      </HBox>
+      <HBox alignment="TOP_RIGHT" prefHeight="27.0" prefWidth="800.0" spacing="10.0" style="-fx-background-color: rgb(155,155,155);">
+         <children>
+            <Button fx:id="btnPrev" disable="true" mnemonicParsing="false" onAction="#prevButton" text="Prev" />
+            <Button fx:id="btnNext" disable="true" mnemonicParsing="false" onAction="#nextButton" text="Next" />
+            <Button fx:id="btnRestart" disable="true" mnemonicParsing="false" onAction="#restartButton" text="Restart" />
+            <Button fx:id="btnFinish" mnemonicParsing="false" onAction="#finishButton" text="Return" />
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </HBox>
+   </children>
+</VBox>
